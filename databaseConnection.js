@@ -8,15 +8,15 @@ const dbConfigHeroku = {
 	password: "k93gkc61lg9gtajy",
 	database: "iqxt7tvps45fkc34",
 	multipleStatements: false,
-	reconnect:true
+	namedPlaceholders: true
 };
 
 const dbConfigLocal = {
 	host: "localhost",
 	user: "root",
 	password: "Password",
-	database: "lab_example",
-	multipleStatements: false
+	multipleStatements: false,
+	namedPlaceholders: true
 };
 
 if (is_heroku) {
@@ -27,4 +27,4 @@ else {
 }
 
 module.exports = database;
-		
+
